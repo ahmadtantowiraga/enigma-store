@@ -1,6 +1,7 @@
 package com.enigma.enigma_store;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -32,8 +33,15 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public void updateMenu() {
-
+    public void updateMenu(Product product, int id) {
+        for (int i = 0; i < products.size(); i++) {
+            if(products.get(i).getId()==id){
+                product.setId(products.get(i).getId());
+                Date date=new Date();
+                product.setDate(date);
+                products.set(i,product);
+            }
+        }
     }
 
     @Override

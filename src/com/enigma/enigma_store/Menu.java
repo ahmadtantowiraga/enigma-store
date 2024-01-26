@@ -73,7 +73,36 @@ public class Menu {
                         productServiceImpl.createMenu(product);
                         break;
                     case "2":
-
+                        int idProduct=Integer.parseInt(helper("Enter the product ID to be deleted : "));
+                        String name2="";
+                        String brand2="";
+                        int price2=0;
+                        do{
+                            name2=helper("Input name of Produt : ");
+                            if (name2.length() < 2 || name2.length() > 50) {
+                                System.out.println("Name (min 3 characters, max 50 characters)");
+                            }else {
+                                break;
+                            }
+                        }while(true);
+                        do{
+                            brand2=helper("Input brand of product : ");
+                            if (brand2.length() < 2 || brand2.length() > 30) {
+                                System.out.println("Name (min 3 characters, max 50 characters)");
+                            }else {
+                                break;
+                            }
+                        }while(true);
+                        do{
+                            price2=Integer.parseInt(helper("Input Price of Product : "));
+                            if (price2 < 0) {
+                                System.out.println("Price (must be a positive number)");
+                            }else {
+                                break;
+                            }
+                        }while(true);
+                        Product product1=new Product(name2,brand2,price2);
+                        productServiceImpl.updateMenu(product1, idProduct);
                         break;
                     case "3":
                         int id=Integer.parseInt(helper("Input ID : "));
