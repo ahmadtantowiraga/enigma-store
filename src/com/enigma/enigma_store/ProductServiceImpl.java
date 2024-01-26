@@ -19,8 +19,16 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public void readMenu() {
-
+    public void readMenu(String key) {
+        for (int i = 0; i < products.size(); i++) {
+            if(products.get(i).getName().equals(key) || products.get(i).getBrand().equals(key)){
+                System.out.println("Product ID : "+ products.get(i).getId());
+                System.out.println("Product Name : "+ products.get(i).getName());
+                System.out.println("Product Brand : "+ products.get(i).getBrand());
+                System.out.println("Product Price : "+ products.get(i).getPrice());
+                System.out.println("Product Time : "+ products.get(i).getDate());
+            }
+        }
     }
 
     @Override

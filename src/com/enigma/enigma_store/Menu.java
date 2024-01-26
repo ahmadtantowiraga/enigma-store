@@ -84,7 +84,9 @@ public class Menu {
                         helper(" ENTER TO CONTINUE");
                         break;
                     case "5":
-
+                        String data=helper("enter keywords : ");
+                        productServiceImpl.readMenu(data);
+                        helper(" ENTER TO CONTINUE");
                         break;
                 }
             }
