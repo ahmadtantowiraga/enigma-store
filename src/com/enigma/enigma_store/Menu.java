@@ -71,6 +71,7 @@ public class Menu {
                         Product product=new Product(name,brand,price);
                         product.setDate(date);
                         productServiceImpl.createMenu(product);
+                        helper(" ENTER TO CONTINUE");
                         break;
                     case "2":
                         int idProduct=Integer.parseInt(helper("Enter the product ID to be deleted : "));
