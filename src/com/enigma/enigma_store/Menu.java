@@ -45,7 +45,7 @@ public class Menu {
                         int price=0;
                         do{
                             name=helper("Input name of Produt : ");
-                            if (name.length() < 2 || name.length() > 50) {
+                            if (name.length() < 3|| name.length() > 50) {
                                 System.out.println("Name (min 3 characters, max 50 characters)");
                             }else {
                                 break;
@@ -53,7 +53,7 @@ public class Menu {
                         }while(true);
                         do{
                             brand=helper("Input brand of product : ");
-                            if (brand.length() < 2 || brand.length() > 30) {
+                            if (brand.length() < 3 || brand.length() > 30) {
                                 System.out.println("Name (min 3 characters, max 50 characters)");
                             }else {
                                 break;
@@ -80,7 +80,7 @@ public class Menu {
                         int price2=0;
                         do{
                             name2=helper("Input name of Produt : ");
-                            if (name2.length() < 2 || name2.length() > 50) {
+                            if (name2.length() < 3 || name2.length() > 50) {
                                 System.out.println("Name (min 3 characters, max 50 characters)");
                             }else {
                                 break;
@@ -88,7 +88,7 @@ public class Menu {
                         }while(true);
                         do{
                             brand2=helper("Input brand of product : ");
-                            if (brand2.length() < 2 || brand2.length() > 30) {
+                            if (brand2.length() < 3 || brand2.length() > 30) {
                                 System.out.println("Name (min 3 characters, max 50 characters)");
                             }else {
                                 break;
