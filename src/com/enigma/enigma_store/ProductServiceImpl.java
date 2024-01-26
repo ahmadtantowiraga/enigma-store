@@ -28,6 +28,7 @@ public class ProductServiceImpl implements ProductService{
                 System.out.println("Product Brand : "+ products.get(i).getBrand());
                 System.out.println("Product Price : "+ products.get(i).getPrice());
                 System.out.println("Product Time  : "+ products.get(i).getDate());
+                System.out.println();
             }
         }
     }
