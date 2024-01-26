@@ -23,11 +23,11 @@ public class ProductServiceImpl implements ProductService{
     public void readMenu(String key) {
         for (int i = 0; i < products.size(); i++) {
             if(products.get(i).getName().equals(key) || products.get(i).getBrand().equals(key)){
-                System.out.println("Product ID : "+ products.get(i).getId());
-                System.out.println("Product Name : "+ products.get(i).getName());
+                System.out.println("Product ID    : "+ products.get(i).getId());
+                System.out.println("Product Name  : "+ products.get(i).getName());
                 System.out.println("Product Brand : "+ products.get(i).getBrand());
                 System.out.println("Product Price : "+ products.get(i).getPrice());
-                System.out.println("Product Time : "+ products.get(i).getDate());
+                System.out.println("Product Time  : "+ products.get(i).getDate());
             }
         }
     }
@@ -58,11 +58,11 @@ public class ProductServiceImpl implements ProductService{
     public void showResult() {
         for (int i = 0; i < products.size(); i++) {
             Product product=products.get(i);
-            System.out.println("Product ID : "+ product.getId());
-            System.out.println("Product Name : "+ product.getName());
+            System.out.println("Product ID    : "+ product.getId());
+            System.out.println("Product Name  : "+ product.getName());
             System.out.println("Product Brand : "+ product.getBrand());
             System.out.println("Product Price : "+ product.getPrice());
-            System.out.println("Product Time : "+ product.getDate());
+            System.out.println("Product Time  : "+ product.getDate());
             System.out.println();
         }
     }
