@@ -5,6 +5,6 @@ public interface ProductService {
     public void createMenu(Product product);
     public void readMenu();
     public void updateMenu();
-    public void deleteMenu();
+    public void deleteMenu(int id);
 
 }
