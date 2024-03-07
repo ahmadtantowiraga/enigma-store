@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
-    public ProductServiceImpl productServiceImpl;
+    public ProductService productServiceImpl;
 
     public Menu() {
         this.productServiceImpl = new ProductServiceImpl();
@@ -35,14 +35,15 @@ public class Menu {
                     check=false;
                 }
             }
+
             if (noMenu.equals("6")){
                 break;
             }else {
                 switch (noMenu) {
                     case "1":
-                        String name="";
-                        String brand="";
-                        int price=0;
+                        String name;
+                        String brand;
+                        int price;
                         do{
                             name=helper("Input name of Produt : ");
                             if (name.length() < 3|| name.length() > 50) {
@@ -54,7 +55,7 @@ public class Menu {
                         do{
                             brand=helper("Input brand of product : ");
                             if (brand.length() < 3 || brand.length() > 30) {
-                                System.out.println("Name (min 3 characters, max 50 characters)");
+                                System.out.println("Name (min 3 characters, max 30 characters)");
                             }else {
                                 break;
                             }
@@ -75,9 +76,9 @@ public class Menu {
                         break;
                     case "2":
                         int idProduct=Integer.parseInt(helper("Enter the product ID to be deleted : "));
-                        String name2="";
-                        String brand2="";
-                        int price2=0;
+                        String name2;
+                        String brand2;
+                        int price2;
                         do{
                             name2=helper("Input name of Produt : ");
                             if (name2.length() < 3 || name2.length() > 50) {
@@ -89,7 +90,7 @@ public class Menu {
                         do{
                             brand2=helper("Input brand of product : ");
                             if (brand2.length() < 3 || brand2.length() > 30) {
-                                System.out.println("Name (min 3 characters, max 50 characters)");
+                                System.out.println("Name (min 3 characters, max 30 characters)");
                             }else {
                                 break;
                             }

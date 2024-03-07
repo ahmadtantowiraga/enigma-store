@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ProductServiceImpl implements ProductService{
-    private final List<Product> products;
+    private List<Product> products;
 
     public ProductServiceImpl() {
         this.products = new ArrayList<>();
@@ -15,7 +15,9 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public void createMenu(Product product) {
-        product.setId(this.products.size()+1);
+        product.setId(product.hashCode());
+
+//        product.setId(products.size()+1);
         products.add(product);
     }
 
